@@ -14,7 +14,7 @@ public class Jewel {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Name: " + name + " |"
                 + " mass: " + mass + " |"
                 + " costPerCarat: " + costPerCarat + " |"

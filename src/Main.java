@@ -17,7 +17,7 @@ public class Main {
 
         //try
         Diamond diamond = new Diamond("s", 12, 12, 0.3);
-        System.out.println(diamond.getTotalCost());
+        //System.out.println(diamond.getTotalCost());
     }
 
 }

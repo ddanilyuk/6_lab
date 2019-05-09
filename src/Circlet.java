@@ -4,6 +4,7 @@ public class Circlet {
     private int numOfJewels;
     private Jewel[] jewels;
     private int counter = 0;
+    private int circletTotalCost = 0;
 
 
     public Circlet(int numOfJewels) {
@@ -35,6 +36,14 @@ public class Circlet {
         }
     }
 
+    public int circletCost(){
+        for (Jewel jewel:jewels) {
+            circletTotalCost += jewel.getTotalCost();
+        }
+        return circletTotalCost;
+    }
+
+
     public void sortTotalCost() {
         Arrays.sort(jewels, new ComparatorByCost());
     }
@@ -53,7 +62,7 @@ public class Circlet {
 
     @Override
     public String toString() {
-        String res = "Circlet of jewels contains " + counter + " jewel:\n";
+        String res = "Circlet of jewels contains " + counter + " jewel with total cost: " + "\n";
         for (int i = 0; i < counter; i++) {
             res += jewels[i].toString() + '\n';
         }
